@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: teal;
+}
+
+/* masuk ke css navbar */
+
+.navbar{
+    background-color: rgb(65, 62, 62);
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    margin-top: 0px;
+    z-index: 10;
+}
+
+.navbar ul{
+    list-style: none;
+    background-color: #fff;
+}
+
+.navbar ul li a{
+    float: left;
+    width: 200px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: x-large;
+    background-color: rgb(61, 60, 60);
+}
+
+.navbar ul li a:hover{
+    float: left;
+    width: 200px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: x-large;
+    background-color: dimgrey;
+}
+
+.navbar ul li:hover ul{
+    display: block;
+}
+
+.submenu ul{
+    display:none;
+    list-style: none;
+    position: absolute;
+    left: 200px;
+    bottom: -100px;
+    width: 150px;
+}
+
+.submenu2 ul{
+    display:none;
+    list-style: none;
+    position: absolute;
+    left: 400px;
+    bottom: -100px;
+    width: 150px;
+}
+
