@@ -4,11 +4,11 @@
     overflow: hidden;
     background-color: rgb(138, 21, 173);
     margin: 20px auto;
-    width: 700px;
+    width: 780px;
     height: 350px;
 }
 .sliderisi img{
-    width: 700px;
+    width: 780px;
     height: 350px;
     float: left;
     float: right;
@@ -16,6 +16,8 @@
 .sliderisi{
     position: absolute;
     width: 3900px;
+
+    /* durasi tampilan */
     animation-name: gambar;
     animation-duration: 15s;
     animation-timing-function: ease-in-out;
@@ -52,44 +54,44 @@
     /* color: ; */
     left: 300px; top: 80px;
     transition: 1s all ease-in-out;
-    -webkit-transition: ease-in-out;
-    -moz-transition: ease-in-out;
-    -o-transition: ease-in-out;
+    -webkit-transition:1s ease-in-out;
+    -moz-transition:1s ease-in-out;
+    -o-transition:1s ease-in-out;
 }
 
 /* .slider1:hover:after{
     color: ;
 } */
 
-@keyframes gambar{
-    0%{
-        left: 0; opacity: 0;
-    }
-     2%{
-         opacity: 1;
-    }
-    20%{
-        left: 0; opacity: 0;
-    }
-    21%{
-         opacity: 0;
-    }
-    24%{
-        opacity: 0;
-    }
-    25%{
-        left: -700px; opacity: 1;
-    }
-    45%{
-        left: -700px; opacity: 1;
-    }
-    46%{
-        opacity: 0;
-    }
-     48%{
-        opacity: 0;
-    }
-    50% {
+@keyframes gambar {     
+	0% {
+		left: 0; opacity: 0; 
+	}     
+	2% {
+		opacity: 1; 
+	}     
+	20% {
+		left: 0; opacity: 1; 
+	}     
+	21% {
+		opacity: 0; 
+	}     
+	24% {
+		opacity: 0; 
+	}     
+	25% {
+		left: -780px; opacity: 1; 
+	}     
+	45% {
+		left: -780px; opacity: 1; 
+	}     
+	46% {
+		opacity: 0; 
+	}     
+	48% {
+		opacity: 0; 
+	}     
+	50% {
 		left: -1536px; opacity: 1; 
 	}     
 	70% {
@@ -113,38 +115,38 @@
 
 	100% {
 		left: 0; opacity: 0; 
-    }
+	}
 }
     
     /* untuk moz */
-    @-moz-keyframes gambar{
-        0%{
-            left: 0; opacity: 0;
-        }
-         2%{
-             opacity: 1;
-        }
-        20%{
-            left: 0; opacity: 1;
-        }
-        21%{
-             opacity: 0;
-        }
-        24%{
-            opacity: 0;
-        }
-        25%{
-            left: -700px; opacity: 1;
-        }
-        45%{
-            left: -700px; opacity: 1;
-        }
-        46%{
-            opacity: 0;
-        }
-         48%{
-            opacity: 0;
-        }
+    @-moz-keyframes gambar {     
+        0% {
+            left: 0; opacity: 0; 
+        }     
+        2% {
+            opacity: 1; 
+        }     
+        20% {
+            left: 0; opacity: 1; 
+        }     
+        21% {
+            opacity: 0; 
+        }     
+        24% {
+            opacity: 0; 
+        }     
+        25% {
+            left: -780px; opacity: 1; 
+        }       
+        45% {
+            left: -780px; opacity: 1; 
+        }     
+        46% {
+            opacity: 0; 
+        }     
+        48% {
+            opacity: 0; 
+        }     
         50% {
             left: -1536px; opacity: 1; 
         }     
@@ -164,125 +166,119 @@
             left: -2304px; opacity: 1; 
         }   	
         97% { 
-            left: -2304px; opacity: 0; 
-        } 
-    
+            left: -2304px; opacity: 0;
+        }   	
         100% {
             left: 0; opacity: 0; 
         }
-   
-}
+    } 
 
 /* untuk webkit */
-@-webkit-keyframes gambar{
-    0%{
-        left: 0; opacity: 0;
-    }
-     2%{
-         opacity: 1;
-    }
-    20%{
-        left: 0; opacity: 1;
-    }
-    21%{
-         opacity: 0;
-    }
-    24%{
-        opacity: 0;
-    }
-    25%{
-        left: -700px; opacity: 1;
-    }
-    45%{
-        left: -700px; opacity: 1;
-    }
-    46%{
-        opacity: 0;
-    }
-     48%{
-        opacity: 0;
-    }
-    50% {
-        left: -1536px; opacity: 1; 
-    }     
-    70% {
-        left: -1536px; opacity: 1; 
-    }     
-    72% {
-        opacity: 0; 
-    }     
-    74% {
-        opacity: 0; 
-    }    
-    75% {
-        left: -2304px; opacity: 1; 
-    }   	
-    95% {
-        left: -2304px; opacity: 1; 
-    }   	
-    97% { 
-        left: -2304px; opacity: 0; 
-    } 
-
-    100% {
-        left: 0; opacity: 0; 
-    }
-
-}
+@-webkit-keyframes gambar {     
+	0% {
+		left: 0; opacity: 0; 
+	}     
+	2% {
+		opacity: 1; 
+	}     
+	20% {
+		left: 0; opacity: 1; 
+	}     
+	21% {
+		opacity: 0; 
+	}     
+	24% {
+		opacity: 0; 
+	}     
+	25% {
+		left: -780px; opacity: 1; 
+	}       
+	45% {
+		left: -780px; opacity: 1; 
+	}     
+	46% {
+		opacity: 0; 
+	}     
+	48% {
+		opacity: 0; 
+	}     
+	50% {
+		left: -1536px; opacity: 1; 
+	}     
+	70% {
+		left: -1536px; opacity: 1; 
+	}     
+	72% {
+		opacity: 0; 
+	}     
+	74% {
+		opacity: 0; 
+	}    
+	75% {
+		left: -2304px; opacity: 1; 
+	}   	
+	95% {
+		left: -2304px; opacity: 1; 
+	}   	
+	97% { 
+		left: -2304px; opacity: 0;
+	}   	
+	100% {
+		left: 0; opacity: 0; 
+	}
+} 
 
 /* untuk si o */
-@-o-keyframes gambar{
-    0%{
-        left: 0; opacity: 0;
-    }
-     2%{
-         opacity: 1;
-    }
-    20%{
-        left: 0; opacity: 0;
-    }
-    21%{
-         opacity: 0;
-    }
-    24%{
-        opacity: 0;
-    }
-    25%{
-        left: -700px; opacity: 1;
-    }
-    45%{
-        left: -700px; opacity: 1;
-    }
-    46%{
-        opacity: 0;
-    }
-     48%{
-        opacity: 0;
-    }
-    50% {
-        left: -1536px; opacity: 1; 
-    }     
-    70% {
-        left: -1536px; opacity: 1; 
-    }     
-    72% {
-        opacity: 0; 
-    }     
-    74% {
-        opacity: 0; 
-    }    
-    75% {
-        left: -2304px; opacity: 1; 
-    }   	
-    95% {
-        left: -2304px; opacity: 1; 
-    }   	
-    97% { 
-        left: -2304px; opacity: 0; 
-    } 
-
-    100% {
-        left: 0; opacity: 0; 
-    }
-
-}
+@-o-keyframes gambar {     
+	0% {
+		left: 0; opacity: 0; 
+	}     
+	2% {
+		opacity: 1; 
+	}     
+	20% {
+		left: 0; opacity: 1; 
+	}     
+	21% {
+		opacity: 0; 
+	}     
+	24% {
+		opacity: 0; 
+	}     
+	25% {
+		left: -780px; opacity: 1; 
+	}       
+	45% {
+		left: -780px; opacity: 1; 
+	}     
+	46% {
+		opacity: 0; 
+	}     
+	48% {
+		opacity: 0; 
+	}     
+	50% {
+		left: -1536px; opacity: 1; 
+	}     
+	70% {
+		left: -1536px; opacity: 1; 
+	}     
+	72% {
+		opacity: 0; 
+	}     
+	74% {
+		opacity: 0; 
+	}    
+	75% {
+		left: -2304px; opacity: 1; 
+	}   	
+	95% {
+		left: -2304px; opacity: 1; 
+	}   	
+	97% { 
+		left: -2304px; opacity: 0;
+	}   	
+	100% {
+		left: 0; opacity: 0; 
+	}
+} 
