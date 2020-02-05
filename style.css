@@ -1,0 +1,96 @@
+/* style css untuk keseluruhan */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* style untuk background body */
+body{
+    background-image: url(img/background.jpg);
+    background-size: cover;
+
+    /* background-image:linear-gradient() ; */
+
+}
+
+table{
+    padding: 100px;
+}
+label{
+    color:#fff;
+}
+.unyak{
+    color: crimson;
+}
+
+/* style css untuk navbar */
+
+.navbar{
+    background-color: rgb(99, 104, 104);
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    margin-top: 0px;
+    z-index: 10;
+}
+
+.navbar ul{
+ list-style: none;
+ background-color:#fff;
+}
+
+
+.navbar ul li a{
+    float: left;
+    width: 200px;
+    display: block;
+    text-align: center ;
+    text-decoration:none;
+    text-transform:capitalize;
+    color: white;
+    font-size: x-large;
+    /* background-color: dimgray; */
+}
+
+.navbar ul li a :hover{
+    float: left;
+    width: 258px;
+    display: block;
+    text-align: center ;
+    text-decoration:none;
+    text-transform:capitalize;
+    color: white;
+    font-size: x-large;
+    /* background-color: rgb(170, 39, 39); */
+}
+.navbar a{
+    background: rgb(99, 104, 104);
+}
+
+.navbar a:hover{
+    background: rgb(13, 146, 128);
+}
+
+.navbar ul li:hover ul{
+    display: block;
+}
+
+.navbar ul ul{
+    display: none;
+    list-style: none;
+    position: absolute;
+    left: 200px;
+    top: 50px;
+    width: 150px;
+    
+}
+
+.navbar ul li:nth-child(3) ul li{
+    display: none;
+    list-style: none;
+    position: absolute;
+    left: 200px;
+    top: 50px;
+    width: 150px;
+}
