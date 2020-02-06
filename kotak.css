@@ -1,0 +1,77 @@
+.tengah{
+    position: relative;
+    left: 250px;
+}
+
+/* css untuk kotak 1  */
+.kotak1{
+    width: 100px;
+    height: 100px;
+    border: 10px solid white;
+    background-image: linear-gradient(45deg, #0d5986, #3fd47bcc);
+    padding: 19px;
+    margin: 100px;
+    
+}
+
+.kotak1:hover{
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(45deg, #0d6a96, #56b3cfcc);
+    padding: 19px;
+    margin: 100px;
+    border-radius: 100px;
+    
+}
+/* close */
+
+/* css untuk kotak 2 */
+.kotak2{
+    width: 100px;
+    height: 100px;
+    border: 10px solid white;
+    background-image: linear-gradient(45deg, #0d5986, #3fd47bcc);
+    padding: 19px;
+    margin: 100px;
+    position: relative;
+    bottom: 255px;
+    left: 242px;
+    
+}
+
+.kotak2:hover{
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(45deg, #c91313, #fafafacc);
+    padding: 19px;
+    margin: 100px;
+    border-radius: 100px;
+    
+}
+/* close */
+
+/* css kotak 3 */
+
+.kotak3{
+    width: 100px;
+    height: 100px;
+    border: 10px solid white;
+    background-image: linear-gradient(45deg, #0d5986, #3fd47bcc);
+    padding: 19px;
+    margin: 100px;
+    position: relative;
+    bottom: 515px;
+    left: 484px;
+    
+}
+
+.kotak3:hover{
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(45deg, #c91313, #fafafacc);
+    padding: 19px;
+    margin: 100px;
+    border-radius: 100px;
+    
+}
+/* close */
