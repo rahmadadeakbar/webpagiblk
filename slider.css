@@ -1,9 +1,13 @@
+*{
+	padding: 0;
+	margin: 0;
+}
 .slider1{
     border: 5px solid pink;
     position: relative; 
     overflow: hidden;
     background-color: rgb(138, 21, 173);
-    margin: 20px auto;
+    margin: 100px;
     width: 780px;
     height: 350px;
 }
