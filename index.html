@@ -5,90 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- dibawah ini css -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/kotak.css">
 </head>
-<body >
-    <!-- menu navbar -->
+<body>
+    <!-- taging navbar -->
     <div class="navbar">
         <ul>
             <li>
-                <a href="iframe.html" target="blank">Menu Frame</a>
+                <a href="index.html">Home</a>
             </li>
             <li>
-                <a href="form.html" target="blank">Form</a>
-                <ul>
-                    <li><a href="">Form Biodata</a></li>
-                    <li><a href="">Form pendaftaran</a></li>
-                </ul>
+                <a href="">Form</a>
+                <div class="submenu"> 
+                    <ul>
+                        <li>
+                            <a href="">biodata</a>
+                        </li>
+                        <li>
+                            <a href="">Pendaftaran</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
+
             <li>
-                <a href="form.html" target="blank">login</a>
-                <ul>
-                    <li><a href=""> Logout</a></li>
-                </ul>
+                <a href="">Tabel</a>
+                <div class="submenu2"> 
+                    <ul>
+                        <li>
+                            <a href="">siswa</a>
+                        </li>
+                        <li>
+                            <a href="">barang</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
         </ul>
+
     </div>
-    
-    <!-- tabel untuk biodata -->
-    <center>
-        <table >
-           
-            <tr>
-                <td colspan="2" style="background-color: dimgrey;">BIODATA <br></td>
-                <td></td>
-            </tr>
-            <!-- 1. row biodata dan foto -->
-            <tr>
-                <td>
-                   <label class="unyak">Nama </label> <br>
-                    <label>Alamat</label> <br>
-                    <label>Tanggal Lahir</label>
-                </td>
-                <td>
-                    <label class="unyak">: Rahmad Ade</label> <br>
-                    <label>: Punge Blang Cut</label><br>
-                    <label>: 1996</label>
-                </td>
-                <td>
-                    <img src="https://images.vexels.com/media/users/3/157512/isolated/preview/d737a872708b488d89d0341ac9b8bc5a-people-contact-icon-people-by-vexels.png" width="100px">
-                </td>
-            </tr>
-            <!-- 2. row pendidikan  -->
-            <tr>
-                <td colspan="2" style="background-color: dimgrey;">PENDIDIKAN <br></td>
-                <td></td>
-            </tr>
-            <!-- 1. row biodata dan foto -->
-            <tr>
-                <td>
-                    <label>SD </label> <br>
-                    <label>SMP</label> <br>
-                    <label style="color: darkmagenta;">SMA</label>
-                </td>
-                <td>
-                    <label>: 18 Banda Aceh</label> <br>
-                    <label>: 11 Banda Aceh</label><br>
-                    <label>: 6 Banda Aceh</label>
-                </td>
-                <td>
-                    <img src="https://cdn.pixabay.com/photo/2018/02/17/00/06/school-3158985_960_720.png" width="100px">
-                </td>
-            </tr>
-            <!-- 3. kemampuan dan pengalaman kerja -->
-            <tr>
-                <td style="background-color: dimgrey;">KEMAMPUAN</td>
-                <td style="background-color: dimgrey;">PENGALAMAN</td>
-            </tr>
-            <!-- 4. media sosial -->
-            <tr>
-                <td colspan="2">MEDIA SOSIAL <br>
-                    <a href="" target="blank"><img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" width="20px">Facebook</a>
-                    <a href="" target="blank"><img src="https://cdn2.iconfinder.com/data/icons/instagram-new/512/instagram-logo-color-512.png" width="20px">Instagram</a>
-                </td>
-            </tr>
-        </table>
-    </center>
-    
+
+    <!-- taging slider -->
+<center>
+    <div class="slider1">
+        <div class="sliderisi">
+            <img src="img/background.jpg" >
+            <img src="https://badoystudio.com/wp-content/uploads/2018/11/apa-itu-programmer-750x410.jpeg" >
+            <img src="img/orang.jpg" >
+            <img src="https://markey.id/wp-content/uploads/2019/01/20190116-003.jpg" >
+
+        </div>
+    </div>
+</center>
+
+<!-- taging untuk gradien box -->
+    <div class="gradien">
+        <a href="http://facebook.com" target="blank"> <p class="kotak1"></p> </a>
+        <a href="http://instagram.com" target="blank"> <p class="kotak2"></p> </a>
+        <a href="http://twitter.com" target="blank"> <p class="kotak3"></p> </a>
+    </div>
+
 </body>
 </html>
