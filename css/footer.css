@@ -1,13 +1,9 @@
 
-        *{
-            margin: 0;
-            padding: 0;
-        }
         footer {
             background-color: crimson;
             position: absolute;
-            top: 600px;
-            height: 60%;
+            bottom: -200%;
+            height: 75%;
             width: 100%;
             /* padding: 10px; */
         }
@@ -28,10 +24,13 @@
 
         .medsos a img{
             width: 52px;
-            z-index: 10px;
+            /* z-index: 10px; */
             background-color: white;
             padding: 10px;
+            /* margin: 10px; */
+            top: 100px;
             border-radius: 50px;
+            position: relative;
         }
 
         .medsos a img:hover{
