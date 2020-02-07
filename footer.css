@@ -1,0 +1,32 @@
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        footer{
+            background-color: crimson;
+            position: absolute;
+            top: 600px;
+            height: 60%;
+            width: 100%;
+            /* padding: 10px; */
+        }
+
+        .tombol{
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            position: relative;
+            display: block;
+            bottom: 38px;
+        }
+
+        .medsos img{
+            width: 52px;
+            z-index: 10px;
+        }
+
+        .map{
+            position: absolute;
+            right: 12px;
+        }
