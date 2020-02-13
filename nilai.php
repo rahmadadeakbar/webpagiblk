@@ -2,12 +2,16 @@
     $nim="1200101";
     $nama="Rahmad Ade Akbar";
     $jurusan="Pendiikan Teknologi Informasi";
-    $nilai=65;
+    $harian=80;
+    $quis=100;
+    $uts=50;
+    $uas=60;
+    $nilai=($harian*10/100)+($quis*15/100)+($uts*35/100)+($uas*40/100);
 
     if($nilai<=50){
-        echo"Grade yang diperoleh oleh $nama dengan $nim dan $jurusan adalah E";
+        echo"Grade yang diperoleh oleh $nama dengan $nim dan $jurusan nilai diperoleh $nilai adalah E";
     }else if($nilai<=65){
-        echo"Grade yang diperoleh oleh $nama dengan $nim dan $jurusan adalah D";
+        echo"Grade yang diperoleh oleh $nama dengan $nim dan $jurusan nilai diperoleh $nilai adalah D";
     }
     else if($nilai<=72){
         echo"Grade yang diperoleh oleh $nama dengan $nim dan $jurusan adalah C";
