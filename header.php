@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- css for grid -->
-    <link rel="stylesheet" href="assets/css/bootstrap-grid.css"> 
-    <link rel="stylesheet" href="assets/css/bootstrap-grid.css.map"> 
-    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css"> 
-    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css.map"> 
-    <!-- css for reboot -->
-    <link rel="stylesheet" href="assets/css/bootstrap-reboot.css"> 
-    <link rel="stylesheet" href="assets/css/bootstrap-reboot.css.map"> 
-    <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css"> 
-    <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css.map"> 
-    <!-- css for bootstrap -->
-    <link rel="stylesheet" href="assets/css/bootstrap.css"> 
-    <link rel="stylesheet" href="assets/css/bootstrap.css.map"> 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css.map"> 
+    <!-- css grid -->
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.css.map">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css.map">
+    <!-- close css grid -->
+    <!-- css reboot -->
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.css.map">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css.map">
+    <!-- close css reboot -->
+    <!-- css bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css.map">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css.map">
 </head>
 <body>
-
-     <!-- open navbar -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-danger" style="background-color: #0d0b8c!important">
-        <a class="navbar-brand" href="#">Navbar</a>
+    <!-- open navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger" style="background-color: #0d0b8c!important">
+        <a class="navbar-brand" href="#">Rahmad Ade </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -53,3 +54,5 @@
         </div>
     </nav>
     <!-- close navbar -->
+
+    

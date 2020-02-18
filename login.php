@@ -1,4 +1,9 @@
+<?php 
+    include'header.php';
+?>
+
 <?php
+
 $username="siswa";
 $password="siswa123";
 
@@ -9,4 +14,8 @@ if($username=="admin"&&$password=="admin123"){
 }else{
     echo"username dan password salah ";
 }
+?>
+
+<?php
+    include'footer.php';
 ?>
