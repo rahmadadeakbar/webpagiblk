@@ -25,8 +25,23 @@
                     $harga=$_POST['harga_brg'];
                     $diskon=0.5;
                     if($harga>=400000){
-                        echo"diskon yang diperoleh sebesar Rp. ",$diskon*$harga , "<br> Harga yang harus dibayar untuk $nama_brg adalah sebesar Rp. ",$harga-($harga*$diskon);
-
+                        echo"
+                            <table class='table-bordered'>
+                                <tr>
+                                    <th>No</th>  
+                                    <th>Nama Barang</th>  
+                                    <th>Harga Barang</th>  
+                                    <th>Harga Diskon</th>  
+                                    <th>Jumlah Bayar</th>  
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>$nama_brg</td>
+                                    <td>Rp. $harga</td>
+                                    <td>Rp. ",$diskon*$harga,"</td>
+                                    <td>Rp. ",$harga-($diskon*$harga),"</td>                        
+                                </tr>
+                            </table>";
                     }
                 }
             ?>
