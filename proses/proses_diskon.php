@@ -2,18 +2,23 @@
     include'../koneksi/koneksi.php';
 
     if(isset($_POST['bayar'])){
-        $id=uniqid();
-        $nama_brg=$_POST['nama_barang'];
-        $harga_barang=$_POST['harga'];
-        $kategori_brg=$_POST['kategori'];
-        $stok_brg=$_POST['stok'];
+        $kode=uniqid();
+        $nama=$_POST['nama_barang'];
+        $harga=$_POST['harga'];
+        $kategori=$_POST['kategori'];
+        $stok=$_POST['stok'];
 
-        $diskon=mysqli_query($koneksi,"INSERT INTO stok VALUES('$id','$nama_brg','$harga_barang','$kategori_brg','$stok_brg')")or die(mysqli_error($diskon));
+        $query=mysqli_query($koneksi,"INSERT INTO stok VALUES('$kode','$nama','$harga','$kategori','$stok')")or die(mysqli_error(''));
 
-        if($diskon){
-            echo'data berhasil di input';
+        if($query){
+            echo'<script>alert("data berhasil di input")
+                window.location.href="../diskon.php";
+            </script>';
         }else{
-            echo'data gagal di input';
+            echo'<script>alert("data gagal di input")
+            window.location.href="../diskon.php";
+        </script>';
         }
+        
     }
 ?>
