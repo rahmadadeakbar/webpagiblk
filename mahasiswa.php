@@ -38,23 +38,57 @@
             <br>
             <br>
         </form>
-       <?php
+    <?php
+        include'koneksi/koneksi.php';
 
-                // if($hasil<=50){
-                //     echo"
-                //         <div class='alert alert-danger' role='alert'>
-                //             Nama : $nama_mhs dengan Nim :$nim_mhs dan Jurusan :$jur_mhs memperoleh nilai sebesar $total  maka dia mendapat grade E
-                //         </div>
-                //     ";
-                // }elseif($total<=65){
-                //     echo"
-                //         <div class='alert alert-warning' role='alert'>
-                //             Nama : $nama_mhs dengan Nim :$nim_mhs dan Jurusan :$jur_mhs memperoleh nilai sebesar $total  maka dia mendapat grade D
-                //         </div>
-                //     ";
-                // }
+        
 
-       ?>
+            $tampil_nilai=mysqli_query($koneksi,"SELECT * FROM mahasiswa ")or die(mysqli_error($tampil_nilai));
+
+        
+
+            while($data=mysqli_fetch_array($tampil_nilai)){
+                if($data['hasil']<=50){
+                    echo"
+                        <div class='alert alert-danger' role='alert'>
+                            Nama : ".$data['nama']." dengan Nim :".$data['nim']." dan Jurusan :".$data['jurusan']." memperoleh nilai sebesar ".$data['hasil']."  maka dia mendapat grade E
+                        </div>
+                    ";
+                }elseif($data['hasil']<=65){
+                    echo"
+                        <div class='alert alert-warning' role='alert'>
+                        Nama : ".$data['nama']." dengan Nim :".$data['nim']." dan Jurusan :".$data['jurusan']." memperoleh nilai sebesar ".$data['hasil']."  maka dia mendapat grade D
+                        </div>
+                    ";
+                }elseif($data['hasil']<=75){
+                    echo"
+                        <div class='alert alert-info' role='alert'>
+                        Nama : ".$data['nama']." dengan Nim :".$data['nim']." dan Jurusan :".$data['jurusan']." memperoleh nilai sebesar ".$data['hasil']."  maka dia mendapat grade C
+                        </div>
+                    ";
+                }elseif($data['hasil']<=85){
+                    echo"
+                        <div class='alert alert-primary' role='alert'>
+                        Nama : ".$data['nama']." dengan Nim :".$data['nim']." dan Jurusan :".$data['jurusan']." memperoleh nilai sebesar ".$data['hasil']."  maka dia mendapat grade B
+                        </div>
+                    ";
+                }elseif($data['hasil']<=100 || $data['hasil']>100){
+                    echo"
+                        <div class='alert alert-success' role='alert'>
+                        Nama : ".$data['nama']." dengan Nim :".$data['nim']." dan Jurusan :".$data['jurusan']." memperoleh nilai sebesar ".$data['hasil']."  maka dia mendapat grade A
+                        </div>
+                    ";
+                }
+            }
+
+
+            
+
+        
+
+                
+
+    ?>
     </div>
 
 <?php
