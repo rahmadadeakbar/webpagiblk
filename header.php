@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css.map">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="assets/sweet/sweetalert.css">
 </head>
 <body>
     <!-- open navbar -->

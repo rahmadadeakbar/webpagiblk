@@ -1,40 +1,40 @@
 <?php
-    include'header.php';
-?>
+include'header.php';
+    include'koneksi/koneksi.php';
+    $id=$_GET['id_mahasiswa'];
 
-<?php
-include 'koneksi/koneksi.php';
+    $show=mysqli_query($koneksi,"SELECT * FROM mahasiswa WHERE id_mahasiswa='$id'") or die(mysqli_error($show));
 
-
-$id= $_GET['id_mahasiswa'];
-
-$show=mysqli_query($koneksi, "SELECT * FROM mahasiswa WHERE id_mahasiswa='$id'") or die (mysqli_error($show));
-
-if(mysqli_num_rows($show)==0){
-
-    echo'
-        <script>window.history.back()</script>
-    ';
-}else{
-    $data=mysqli_fetch_array($show);
-}
-
+    if(mysqli_num_rows($show)==0){
+        echo'
+                <script>window.history.back();</script>
+        ';
+    }else{
+            $data=mysqli_fetch_array($show);
+    }
 
 ?>
+
+<!-- content -->
 <div class="container">
-    <form action="proses/proses_edit_nilai.php" method="GET">
-        <input type="text" hidden name="id_mahasiswa" value="<?php echo $id;?>">
+        <form action="proses/proses_edit_mahasiswa.php" method="POST">
+        <input type="hidden" name="id" value="<?php echo $data['id_mahasiswa']?>" >
+
             <div class="form-group">
                 <label for="nama_mahasiswa">Nama :</label>
-                <input type="text" name="nama" class="form-control" id="nama_mahasiswa" placeholder="Example input placeholder" value="<?php echo $data['nama']?>">
+                <input type="text" name="nama_mhs" class="form-control" id="nama_mahasiswa" placeholder="Example input placeholder" value="<?php echo $data['nama']?>">
             </div>
             <div class="form-group">
                 <label for="nim_mahasiswa">NIM :</label>
-                <input type="text" name="nim" class="form-control" id="nim_mahasiswa" placeholder="Another input placeholder" value="<?php echo $data['nim']?>">
+                <input type="text" name="nim" class="form-control" id="nim_mahasiswa" placeholder="Another input placeholder"value="<?php echo $data['nim']?>">
             </div>
             <div class="form-group">
                 <label for="jurusan_mhs">Jurusan :</label>
                 <input type="text" name="jur" class="form-control" id="jurusan_mhs" placeholder="Another input placeholder" value="<?php echo $data['jurusan']?>">
+            </div>
+            <div class="form-group">
+                <label for="jurusan_mhs">Matakuliah :</label>
+                <input type="text" name="matakuliah" class="form-control" id="jurusan_mhs" placeholder="Another input placeholder" value="<?php echo $data['mata_kuliah']?>">
             </div>
             <div class="form-group">
                 <label for="n_harian">Nilai Harian :</label>
@@ -50,16 +50,16 @@ if(mysqli_num_rows($show)==0){
             </div>
             <div class="form-group">
                 <label for="n_uas">Nilai UAS :</label>
-                <input type="text" name="uas" class="form-control" id="n_uas" placeholder="Another input placeholder" value="<?php echo $data['nilai_uas']?>" >
+                <input type="text" name="uas" class="form-control" id="n_uas" placeholder="Another input placeholder" value="<?php echo $data['nilai_uas']?>">
             </div>
 
-            <input type="submit" name="update" class="btn btn-info" value="Update">
+            <input type="submit" name="update" class="btn btn-success" value="Update">
             <br>
             <br>
             <br>
-    </form>
-</div>
+        </form>
+ </div>
 
-<?php
-    include'footer.php';
-?>
+ <?php
+ include'footer.php';
+ ?>

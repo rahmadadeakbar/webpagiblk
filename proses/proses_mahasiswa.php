@@ -7,6 +7,7 @@ include'../koneksi/koneksi.php';
                 $nama_mhs=$_POST['nama'];
                 $nim_mhs=$_POST['nim'];
                 $jur_mhs=$_POST['jur'];
+                $matakuliah=$_POST['matakuliah'];
                 $nilai_harian=$_POST['harian'];
                 $nilai_quiz=$_POST['quiz'];
                 $nilai_uts=$_POST['uts'];
@@ -25,7 +26,7 @@ include'../koneksi/koneksi.php';
                     $grade='A';
                 }
 
-                $query_nilai=mysqli_query($koneksi,"INSERT INTO mahasiswa VALUES('$id_mahasiswa','$nama_mhs','$nim_mhs','$jur_mhs','$nilai_harian','$nilai_quiz','$nilai_uts','$nilai_uas','$hasil','$grade')") or die (mysqli_error($query_nilai));
+                $query_nilai=mysqli_query($koneksi,"INSERT INTO mahasiswa VALUES('$id_mahasiswa','$nama_mhs','$nim_mhs','$jur_mhs','$matakuliah','$nilai_harian','$nilai_quiz','$nilai_uts','$nilai_uas','$hasil','$grade')") or die (mysqli_error($query_nilai));
 
                 if($query_nilai){
                     echo'

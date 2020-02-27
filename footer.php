@@ -94,6 +94,8 @@
 <script src="assets/js/bootstrap.js.map"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/bootstrap.min.js.map"></script>
+<script src="assets/sweet/sweetalert.js"></script>
+<script src="assets/sweet/sweetalert.min.js"></script>
 <!-- close bootstrap js -->
 
 </body>

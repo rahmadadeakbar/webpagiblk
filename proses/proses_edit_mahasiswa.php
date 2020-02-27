@@ -1,15 +1,16 @@
 <?php
 include'../koneksi/koneksi.php';
 
-if(isset($_GET['update'])){
-    $id=$_GET['id_mahasiswa'];
-    $nama=$_GET['nama'];
-    $nim=$_GET['nim'];
-    $jurusan=$_GET['jur'];
-    $harian=$_GET['harian'];
-    $quiz=$_GET['quiz'];
-    $uts=$_GET['uts'];
-    $uas=$_GET['uas'];
+if(isset($_POST['update'])){
+    $id_mahasiswa=$_POST['id'];
+    $nama=$_POST['nama_mhs'];
+    $nim=$_POST['nim'];
+    $jurusan=$_POST['jur'];
+    $matakuliah=$_POST['matakuliah'];
+    $harian=$_POST['harian'];
+    $quiz=$_POST['quiz'];
+    $uts=$_POST['uts'];
+    $uas=$_POST['uas'];
     $hasil=($harian*0.1)+($quiz*0.15)+($uts*0.35)+($uas*0.4);
 
                 if($hasil<=50){
@@ -24,7 +25,7 @@ if(isset($_GET['update'])){
                     $grade='A';
                 }
 
-    $update =mysqli_query($koneksi,"UPDATE mahasiswa SET nama='$nama',nim='$nim',jurusan='$jurusan',nilai_harian='$harian',nilai_quiz='$quiz',nilai_uts='$uts',nilai_uas='$uas',hasil='$hasil', grade='$grade' WHERE id_mahasiswa='$id'")or die(mysqli_error($update));
+    $update =mysqli_query($koneksi,"UPDATE mahasiswa SET nama='$nama',nim='$nim',jurusan='$jurusan',mata_kuliah='$matakuliah',nilai_harian='$harian',nilai_quiz='$quiz',nilai_uts='$uts',nilai_uas='$uas',hasil='$hasil', grade='$grade' WHERE id_mahasiswa='$id_mahasiswa'")or die(mysqli_error($update));
     
     if($update){
         echo'
