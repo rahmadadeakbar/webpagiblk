@@ -91,18 +91,18 @@
                         Nama : ".$data['nama']." dengan Nim :".$data['nim']." dan Jurusan :".$data['jurusan']." dengan matakuliah ".$data['mata_kuliah']." memperoleh nilai sebesar ".$data['hasil']."  maka dia mendapat grade B
                         <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."' type='submit' class='btn btn-info'>Edit</a>  
 
-                        <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."' type='submit' class='btn btn-danger' onClick='hapus();'>Hapus</a>  
+                        <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."' type='submit' class='btn btn-danger' onclick='return confirm(\"Yakin ingin menghapus?\")'>Hapus</a>  
                         </div>
                     ";
                 }elseif($data['hasil']<=100 || $data['hasil']>100){
-                    echo"
-                        <div class='alert alert-success' role='alert'>
-                        Nama : ".$data['nama']." dengan Nim :".$data['nim']." dan Jurusan :".$data['jurusan']." dengan matakuliah ".$data['mata_kuliah']." memperoleh nilai sebesar ".$data['hasil']."  maka dia mendapat grade A
-                        <a href='edit_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."' type='submit' class='btn btn-info'>Edit</a>  
+                    echo'
+                        <div class="alert alert-success" role="alert">
+                        Nama : '.$data["nama"].' dengan Nim :'.$data["nim"].' dan Jurusan :'.$data['jurusan'].' dengan matakuliah '.$data['mata_kuliah'].' memperoleh nilai sebesar '.$data['hasil'].'  maka dia mendapat grade A
+                        <a href="edit_mahasiswa.php?id_mahasiswa='.$data['id_mahasiswa'].'" type="submit" class="btn btn-info">Edit</a>  
                         
-                        <a href='proses/proses_hapus_mahasiswa.php?id_mahasiswa=".$data['id_mahasiswa']."' type='submit' class='btn btn-danger' onClick='hapus();'>Hapus</a>  
+                        <a href="proses/proses_hapus_mahasiswa.php?id_mahasiswa='.$data['id_mahasiswa'].'"  class="btn btn-danger" onclick="return confirm(\'Yakin ingin menghapus?\')">Hapus</a>  
                         </div>
-                    ";
+                    ';
                 }
             }
 

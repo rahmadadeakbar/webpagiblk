@@ -1,4 +1,5 @@
 <?php
+session_start();
 include'../koneksi/koneksi.php';
 
 
@@ -32,7 +33,9 @@ include'../koneksi/koneksi.php';
                     </script>";
                 }
             }else{
-                echo'data gagal';
+                echo'<script>alert("username dan password salah!")
+                    window.location.href="../login.php";
+                </script>';
             }
 
 
