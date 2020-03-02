@@ -26,7 +26,7 @@
         <label for="inputPassword" class="col-sm-2 col-form-label">Jenis Kelamin</label>
         <div class="form-group col-md-4">
             <select id="inputState" name="jk" class="form-control">
-                <option selected value="Laki-Laki">Laki-laki</option>
+                <option selected value="Laki-Laki">Laki-Laki</option>
                 <option value="Perempuan">Perempuan</option>
             </select>
         </div>
