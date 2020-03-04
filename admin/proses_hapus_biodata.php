@@ -1,4 +1,5 @@
-<?
+<?php
+
 include'../koneksi/koneksi.php';
 
             if(isset($_GET['id_biodata'])){
@@ -13,4 +14,4 @@ include'../koneksi/koneksi.php';
                 }
             
             }
-    ?>
+?>

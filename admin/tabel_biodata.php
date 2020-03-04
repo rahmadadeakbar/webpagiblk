@@ -83,7 +83,7 @@
                                                 <td><?php echo $data['tempat_lahir']?></td>
                                                 <td><?php echo $data['no_hp']?></td>
                                                 <td><?php echo $data['hobby']?></td>
-                                                <td><a href="proses_hapus_biodata.php?id_biodata=<? echo $data['id_biodata']?>" type="submit" class="btn btn-danger">Hapus </a></td>
+                                                <td><a href="proses_hapus_biodata.php?id_biodata=<?php echo $data['id_biodata']?>" type="submit" class="btn btn-danger">Hapus </a></td>
                                             </tr>
                                         </tbody>
                                         <?php 
@@ -144,7 +144,3 @@
 </body>
 
 </html>
-<?php
-
-
-?>
