@@ -10,11 +10,11 @@
             $tanggal=$_POST['tanggal_lahir'];
             $tempat_lahir=$_POST['tempat_lahir'];
             $no_hp=$_POST['no_hp'];
-            $hobby1=$_POST['hobby1'];
-            $hobby2=$_POST['hobby2'];
-            $hobby3=$_POST['hobby3'];
-            $hobby4=$_POST['hobby4'];
-            $hobby=($hobby1.','.$hobby2.','.$hobby3.','.$hobby4);
+            $hobby1=(!empty($_POST['hobby1']))?$_POST['hobby1']:'';
+            $hobby2=(!empty($_POST['hobby2']))?$_POST['hobby2']:'';
+            $hobby3=(!empty($_POST['hobby3']))?$_POST['hobby3']:'';
+            $hobby4=(!empty($_POST['hobby4']))?$_POST['hobby4']:'';
+            $hobby=($hobby1.''.$hobby2.''.$hobby3.''.$hobby4);
 
             $nama_file=$_FILES['foto']['name'];
         
@@ -42,3 +42,5 @@
             
         }
     ?>
+
+    
