@@ -35,18 +35,7 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <?php
-                    $nampildata=mysqli_query($koneksi, "SELECT * FROM biodata")or die(mysqli_error($nampildata));
-
-                    if(mysqli_num_rows($nampildata)==0){
-                        echo'<tr>data kosong</tr>';
-                    }else{
-                        $no=1;
-                        while ($data=mysqli_fetch_assoc($nampildata)) {
-
-                ?>
-
-
+                
                 <div class="row">
                     <!-- column -->
                     <div class="col-12">
@@ -70,6 +59,17 @@
                                                 <th>Hobby</th>
                                             </tr>
                                         </thead>
+
+                                        <?php
+                                            $nampildata=mysqli_query($koneksi, "SELECT * FROM biodata")or die(mysqli_error($nampildata));
+
+                                            if(mysqli_num_rows($nampildata)==0){
+                                                echo'<tr>data kosong</tr>';
+                                            }else{
+                                                $no=1;
+                                                while ($data=mysqli_fetch_assoc($nampildata)) {
+
+                                        ?>
                                         <tbody>
                                             <tr>
                                                 <td><?php echo $no;?></td>
@@ -84,6 +84,12 @@
                                                 <td><?php echo $data['hobby']?></td>
                                             </tr>
                                         </tbody>
+                                        <?php 
+                                            $no++;
+                                                }
+                                            
+                                            }
+                                        ?>
                                     </table>
                                 </div>
                             </div>
@@ -91,12 +97,6 @@
                     </div>
                 </div>
 
-                <?php 
-                $no++;
-                    }
-                
-                    }
-                ?>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->

@@ -21,7 +21,7 @@ include'../koneksi/koneksi.php';
                     $_SESSION['status']='login';
 
                     echo"<script>
-                    alert(window.location.href='../diskon.php');
+                    alert(window.location.href='../admin/index.php');
                     </script>";
                 }else if($data['level']=="pembeli"){
                     $_SESSION['username']=$data['username'];
