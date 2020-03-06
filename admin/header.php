@@ -36,9 +36,36 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <style>
-    p{
-        color: #ffffff;
+    .ps {
+        -ms-touch-action: auto;
+        touch-action: auto;
+        overflow: hidden !important;
+        -ms-overflow-style: none;
+        background-color: #13406a;
     }
+
+    .sidebar-nav {
+    background: #13406a;
+    padding: 30px 0 0 0px;
+}
+
+.sidebar-nav ul li a {
+    color: #ffffff;
+    padding: 10px 35px 10px 15px;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+}
+.sidebar-nav ul li a.active, .sidebar-nav ul li a:hover {
+    color: #ffffff;
+}
+.sidebar-nav > ul > li > a i {
+    color: #ffffff;
+}
+.sidebar-nav ul li a.active i, .sidebar-nav ul li a:hover i {
+    color: #b2b2b2;
+}
+
 </style>
 </head>
 

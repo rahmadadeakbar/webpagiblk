@@ -21,7 +21,8 @@ include'../koneksi/koneksi.php';
                     $_SESSION['status']='login';
 
                     echo"<script>
-                    alert(window.location.href='../admin/index.php');
+                    alert('Selamat Datang Penjual')
+                    window.location.href='../admin/index.php';
                     </script>";
                 }else if($data['level']=="pembeli"){
                     $_SESSION['username']=$data['username'];
@@ -29,7 +30,8 @@ include'../koneksi/koneksi.php';
                     $_SESSION['status']='login';
 
                     echo"<script>
-                    alert(window.location.href='../mahasiswa.php');
+                    alert('Selamat Datang Pembeli')
+                    window.location.href='../index.php';
                     </script>";
                 }
             }else{

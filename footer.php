@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="page-footer font-small bg-danger pt-4" style="background-color: #0d0b8c!important; color:#fff;">
+<footer class="page-footer font-small bg-danger pt-4" style="background-color: #18497d!important; color:#fff;">
 
   <!-- Footer Links -->
   <div class="container-fluid text-center text-md-left">

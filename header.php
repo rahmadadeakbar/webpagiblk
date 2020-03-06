@@ -30,15 +30,24 @@
 </head>
 <body>
     <!-- open navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-danger" style="background-color: #0d0b8c!important">
-        <a class="navbar-brand" href="#">Rahmad Ade </a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger" style="background-color: #18497d!important">
+        <a class="navbar-brand" href="#">E-Alumni </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="portofolio.php">Portofolio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="alumni.php">Alumni  <span class="sr-only">(current)</span></a>
             </li>
 
             <?php if($_SESSION['level']=="penjual"){?>
