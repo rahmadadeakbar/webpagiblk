@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>AdminWrap - Easy to Customize Bootstrap 4 Admin Template</title>
+    <title>E-ALUMNI - Pemrograman Web BLK</title>
     <!-- Bootstrap Core CSS -->
     <link href="assets/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/node_modules/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
@@ -35,7 +35,13 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<style>
+    p{
+        color: #ffffff;
+    }
+</style>
 </head>
+
 
 <body class="fix-header fix-sidebar card-no-border">
     <!-- ============================================================== -->
@@ -44,7 +50,7 @@
     <div class="preloader">
         <div class="loader">
             <div class="loader__figure"></div>
-            <p class="loader__label">Admin Wrap</p>
+            <p class="loader__label"></p>
         </div>
     </div>
     <!-- ============================================================== -->
@@ -64,16 +70,13 @@
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
-                            <!-- Light Logo icon -->
-                            <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                           
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
                          <!-- dark Logo text -->
-                         <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                         <!-- Light Logo text -->    
-                         <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                         <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" width="150px"/>
+                         <!-- Light Logo text -->
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -122,7 +125,9 @@
                         </li>
                         <li> <a class="waves-effect waves-dark" href="biodata.php" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Biodata</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="barang.php" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Form Barang</span></a>
+                        <li> <a class="waves-effect waves-dark" href="pekerjaan.php" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Pekerjaan</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="project.php" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Ide Project</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="tabel_biodata.php" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Table Biodata</span></a>
                         </li>
@@ -133,7 +138,7 @@
                         
                     </ul>
                     <div class="text-center m-t-30">
-                        <a href="https://wrappixel.com/templates/adminwrap/" class="btn waves-effect waves-light btn-info hidden-md-down"> Upgrade to Pro</a>
+                        <a href="../logout.php" class="btn waves-effect waves-light btn-info hidden-md-down"> Log Out</a>
                     </div>
                 </nav>
                 <!-- End Sidebar navigation -->
