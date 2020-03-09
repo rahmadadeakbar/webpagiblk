@@ -10,7 +10,7 @@
         
         <script>
         alert('data berhasil dihapus');</script>
-    <?php }else{?>
+        <?php }else{?>
         <script>alert('data gagal dihapus');</script>
 
 <?php   }

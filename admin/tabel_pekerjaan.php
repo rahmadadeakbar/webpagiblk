@@ -3,45 +3,28 @@
     include'header.php';
 
 ?>
-        <!-- ============================================================== -->
-        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Page wrapper  -->
-        <!-- ============================================================== -->
+       
         <div class="page-wrapper">
-            <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
             <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Table Biodata</h3>
+                        <h3 class="text-themecolor">Table Pekerjaan</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Table Biodata</li>
+                            <li class="breadcrumb-item active">Table Pekerjaan</li>
                         </ol>
                     </div>
                     <div class="col-md-7 align-self-center">
                         <a href="https://wrappixel.com/templates/adminwrap/" class="btn waves-effect waves-light btn btn-info pull-right hidden-sm-down"> Upgrade to Pro</a>
                     </div>
                 </div>
-                <!-- ============================================================== -->
-                <!-- End Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
                 
                 <div class="row">
                     <!-- column -->
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Tabel Biodata</h4>
+                                <h4 class="card-title">Tabel Pekerjaan</h4>
                                 <h6 class="card-subtitle">Add class <code>.table</code></h6>
                                 <div class="table-responsive">
                                     <table class="table">
@@ -50,19 +33,17 @@
                                                 <th>No</th>
                                                 <th>Foto</th>
                                                 <th>Nama</th>
-                                                <th>Email</th>
-                                                <th>Jenis Kelamin</th>
+                                                <th>Nama Pekerjaan</th>
+                                                <th>Nama Perusahaan</th>
+                                                <th>Tahun</th>
                                                 <th>Alamat</th>
-                                                <th>Tanggal Lahir</th>
-                                                <th>Tempat Lahir</th>
                                                 <th>No HP</th>
-                                                <th>Hobby</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
 
                                         <?php
-                                            $nampildata=mysqli_query($koneksi, "SELECT * FROM biodata")or die(mysqli_error($nampildata));
+                                            $nampildata=mysqli_query($koneksi, "SELECT * FROM pekerjaan p LEFT JOIN biodata b on p.id_biodata=b.id_biodata")or die(mysqli_error($nampildata));
 
                                             if(mysqli_num_rows($nampildata)==0){
                                                 echo'<tr>data kosong</tr>';
@@ -74,22 +55,22 @@
                                         <tbody>
                                             <tr>
                                                 <td><?php echo $no;?></td>
-                                                <td><?php echo"<img width='50px' src='../upload/".$data['foto']."'>";?></td>
+                                                <td><?php echo"<img width='50px' src='../upload/pekerjaan/".$data['gambar']."'>";?></td>
                                                 <td><?php echo $data['nama']?></td>
-                                                <td><?php echo $data['email']?></td>
-                                                <td><?php echo $data['jenis_kelamin']?></td>
-                                                <td><?php echo $data['alamat']?></td>
-                                                <td><?php echo $data['tanggal_lahir']?></td>
-                                                <td><?php echo $data['tempat_lahir']?></td>
-                                                <td><?php echo $data['no_hp']?></td>
-                                                <td><?php echo $data['hobby']?></td>
-                                                <td><a href="../proses/proses_hapus_biodata.php?id_biodata=<?php echo $data['id_biodata']?>" type="submit" class="btn btn-danger">Hapus </a></td>
+                                                <td><?php echo $data['nama_pekerjaan']?></td>
+                                                <td><?php echo $data['nama_perusahaan']?></td>
+                                                <td><?php echo $data['tahun']?></td>
+                                                <td><?php echo $data['alamat_perusahaan']?></td>
+                                                <td><?php echo $data['no_hp_perusahaan']?></td>
+                                                <td>
+                                                    <a href="edit_pekerjaan.php?id_pekerjaan=<?php echo $data['id_pekerjaan']?>" type="submit" class="btn btn-info">Edit </a>
+                                                    <a href="../proses/proses_hapus_pekerjaan.php?id_pekerjaan=<?php echo $data['id_pekerjaan']?>" type="submit" class="btn btn-danger" onclick='return confirm("Yakin ingin menghapus?")'>Hapus</a>
+                                                </td>
                                             </tr>
                                         </tbody>
                                         <?php 
                                             $no++;
                                                 }
-                                            
                                             }
                                         ?>
                                     </table>
@@ -98,27 +79,11 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
             <footer class="footer">
                 © 2018 Adminwrap by wrappixel.com
             </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
         </div>
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
     <!-- End Wrapper -->

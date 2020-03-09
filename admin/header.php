@@ -158,7 +158,7 @@
                         </li>
                         <li> <a class="waves-effect waves-dark" href="tabel_biodata.php" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Table Biodata</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="tabel_barang.php" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Tabel Barang</span></a>
+                        <li> <a class="waves-effect waves-dark" href="tabel_pekerjaan.php" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Tabel Pekerjaan</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="map-google.php" aria-expanded="false"><i class="fa fa-globe"></i><span class="hide-menu">Map</span></a>
                         </li>

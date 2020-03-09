@@ -1,4 +1,5 @@
 <?php 
+    include'../koneksi/koneksi.php';
     include'header.php';
 ?>
         <!-- ============================================================== -->
@@ -25,36 +26,40 @@
                     </div>
                     
                 </div>
-                <!-- ============================================================== -->
-                <!-- End Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
-                <!-- Row -->
+                <?php 
+
+                    $id_pekerjaan=$_GET['id_pekerjaan'];
+
+                    $queryupdate=mysqli_query($koneksi,"SELECT * FROM pekerjaan WHERE id_pekerjaan='$id_pekerjaan'")or die(mysqli_error($queryupdate));
+
+                    $data=mysqli_fetch_assoc($queryupdate);
+
+                ?>
+
                 <div class="row">
                     <!-- Column -->
                     <div class="col-lg-12 col-xlg-9 col-md-7">
                         <div class="card">
                             <!-- Tab panes -->
                             <div class="card-body">
-                                <form class="form-horizontal form-material" action="../proses/proses_pekerjaan.php" method="POST" enctype="multipart/form-data">
+                                <form class="form-horizontal form-material" action="../proses/proses_edit_pekerjaan.php" method="POST" enctype="multipart/form-data">
+                                    <input type="hidden" name="id_pekerjaan" value="<?php echo $data['id_pekerjaan'];?>">
                                     <div class="form-group">
                                         <label class="col-md-12">Nama Pekerjaan</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="Masukkan Nama" class="form-control form-control-line" name="nama_pekerjaan">
+                                            <input type="text" placeholder="Masukkan Nama" class="form-control form-control-line" name="nama_pekerjaan" value="<?php echo $data['nama_pekerjaan'];?>">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="example-email" class="col-md-12">Perusahaan Bekerja</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="Masukkan Perusahaan" class="form-control form-control-line" id="example-email" name="perusahaan"> 
+                                            <input type="text" placeholder="Masukkan Perusahaan" class="form-control form-control-line" id="example-email" name="perusahaan" value="<?php echo $data['nama_perusahaan'];?>"> 
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="example-email" class="col-md-12">Tahun Bekerja</label>
                                         <div class="col-md-12">
-                                            <input type="number" placeholder="Masukkan Perusahaan" class="form-control form-control-line" id="example-email" name="tahun_bekerja"> 
+                                            <input type="number" placeholder="Masukkan Perusahaan" class="form-control form-control-line" id="example-email" name="tahun_bekerja" value="<?php echo $data['tahun'];?>"> 
                                         </div>
                                     </div>
                                     
@@ -62,14 +67,14 @@
                                     <div class="form-group">
                                         <label class="col-md-12">Alamat Kantor</label>
                                         <div class="col-md-12">
-                                            <textarea rows="5" name="alamat" class="form-control form-control-line"></textarea>
+                                            <textarea rows="5" name="alamat" class="form-control form-control-line"><?php echo $data['alamat_perusahaan'];?></textarea>
                                         </div>
                                     </div>
                                     
                                     <div class="form-group">
                                         <label class="col-md-12">Nomor HP Perusahaan</label>
                                         <div class="col-md-12">
-                                            <input type="number" placeholder="masukkan No HP" class="form-control form-control-line" name="no_hp">
+                                            <input type="text" placeholder="masukkan No HP" class="form-control form-control-line" name="no_hp" value="<?php echo $data['no_hp_perusahaan'];?>">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -82,7 +87,7 @@
                                     
                                     <div class="form-group">
                                         <div class="col-sm-12">
-                                            <button type="submit" class="btn btn-success" name="tambah">Simpan</button>
+                                            <button type="submit" class="btn btn-success" name="update">Update</button>
                                         </div>
                                     </div>
                                 </form>
