@@ -17,6 +17,7 @@ include'../koneksi/koneksi.php';
             if($cek>0){
                 if($data['level']=="admin"){
                     $_SESSION['username']=$data['username'];
+                    $_SESSION['nama_lengkap']=$data['nama_lengkap'];
                     $_SESSION['level']=$data['level'];
                     $_SESSION['status']='login';
 
