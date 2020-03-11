@@ -33,6 +33,13 @@
                 <!-- ============================================================== -->
                 <!-- Sales Chart and browser state-->
                 <!-- ============================================================== -->
+               
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong><?php echo $_SESSION['username']?></strong> anda sudah login horeeee..
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
                 <div class="row">
                     <!-- Column -->
                     <div class="col-lg-8">

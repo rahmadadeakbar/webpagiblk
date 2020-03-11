@@ -30,8 +30,8 @@
     <link href="css/pages/dashboard1.css" rel="stylesheet">
     <!-- page css -->
     <link href="css/pages/icon-page.css" rel="stylesheet">
-     <!-- page css -->
-     <link href="css/pages/google-vector-map.css" rel="stylesheet">
+    <!-- page css -->
+    <link href="css/pages/google-vector-map.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
     <link href="css/colors/default.css" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -102,13 +102,13 @@
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                           
+                        
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
-                         <!-- dark Logo text -->
-                         <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" width="150px"/>
-                         <!-- Light Logo text -->
+                        <!-- dark Logo text -->
+                        <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" width="150px"/>
+                        <!-- Light Logo text -->
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -134,8 +134,18 @@
                         <!-- ============================================================== -->
                         <!-- Profile -->
                         <!-- ============================================================== -->
+                        
                         <li class="nav-item dropdown u-pro">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down"><?php echo  $_SESSION['username'];?></span> </a>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" width="30px" alt="user" class="" />
+                                <?php echo $_SESSION['username']?> &nabla;
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#"></a>
+                                    <a class="dropdown-item" href="#">Profil</a>
+                                    <a class="dropdown-item" href="../logout.php">Logout</a>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -182,9 +192,7 @@
 
                     <?php }?>
                     </ul>
-                    <div class="text-center m-t-30">
-                        <a href="../logout.php" class="btn waves-effect waves-light btn-info hidden-md-down"> Log Out</a>
-                    </div>
+                    
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
