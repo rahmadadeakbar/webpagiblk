@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -148,6 +151,7 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
+                    <?php if($_SESSION['level']=="admin"){?>
                         <li> <a class="waves-effect waves-dark" href="index.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="biodata.php" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Biodata</span></a>
@@ -163,6 +167,18 @@
                         <li> <a class="waves-effect waves-dark" href="map-google.php" aria-expanded="false"><i class="fa fa-globe"></i><span class="hide-menu">Map</span></a>
                         </li>
                         
+                    <?php } else if($_SESSION['level']=="user"){?>
+                        
+                        <li> <a class="waves-effect waves-dark" href="index.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="biodata.php" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Biodata</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="pekerjaan.php" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Pekerjaan</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="project.php" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Ide Project</span></a>
+                        </li>
+
+                    <?php }?>
                     </ul>
                     <div class="text-center m-t-30">
                         <a href="../logout.php" class="btn waves-effect waves-light btn-info hidden-md-down"> Log Out</a>

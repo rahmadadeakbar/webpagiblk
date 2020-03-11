@@ -99,7 +99,6 @@
             
             </ul>
         </div>
+        <div id="google_translate_element"></div>
     </nav>
     <!-- close navbar -->
-
-    

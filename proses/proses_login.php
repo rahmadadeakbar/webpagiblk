@@ -15,7 +15,7 @@ include'../koneksi/koneksi.php';
             $data=mysqli_fetch_assoc($login);
 
             if($cek>0){
-                if($data['level']=="penjual"){
+                if($data['level']=="admin"){
                     $_SESSION['username']=$data['username'];
                     $_SESSION['level']=$data['level'];
                     $_SESSION['status']='login';
@@ -24,14 +24,14 @@ include'../koneksi/koneksi.php';
                     alert('Selamat Datang Penjual')
                     window.location.href='../admin/index.php';
                     </script>";
-                }else if($data['level']=="pembeli"){
+                }else if($data['level']=="user"){
                     $_SESSION['username']=$data['username'];
                     $_SESSION['level']=$data['level'];
                     $_SESSION['status']='login';
 
                     echo"<script>
                     alert('Selamat Datang Pembeli')
-                    window.location.href='../index.php';
+                    window.location.href='../admin/index.php';
                     </script>";
                 }
             }else{

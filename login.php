@@ -66,8 +66,8 @@
           <div class="input-block">
           <label for="signup-level">Level</label>
               <select name="level" id="signup-level">
-                  <option value="penjual">Penjual</option>
-                  <option value="pembeli">Pembeli</option>
+                  <option value="admin">Admin</option>
+                  <option value="user">User</option>
               </select>
           </div>
 
