@@ -63,13 +63,13 @@
             <input id="signup-nama" type="text" name="nama_lengkap" required>
           </div>
 
-          <div class="input-block">
+          <!-- <div class="input-block">
           <label for="signup-level">Level</label>
               <select name="level" id="signup-level">
                   <option value="admin">Admin</option>
                   <option value="user">User</option>
               </select>
-          </div>
+          </div> -->
 
           
         </fieldset>

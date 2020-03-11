@@ -6,6 +6,7 @@ include'../koneksi/koneksi.php';
         if(isset($_POST['login'])){
             $username= $_POST['username'];
             $password=md5($_POST['pass']);
+            
 
             // query
             $login=mysqli_query($koneksi,"SELECT * FROM user WHERE username='$username' and pass='$password'");
