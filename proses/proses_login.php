@@ -26,6 +26,7 @@ include'../koneksi/koneksi.php';
                     </script>";
                 }else if($data['level']=="user"){
                     $_SESSION['username']=$data['username'];
+                    $_SESSION['nama_lengkap']=$data['nama_lengkap'];
                     $_SESSION['level']=$data['level'];
                     $_SESSION['status']='login';
 
