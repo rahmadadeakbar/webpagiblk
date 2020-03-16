@@ -76,6 +76,7 @@
                                             <tr>
                                                 <td><?php echo $no;?></td>
                                                 <td>
+                                                
                                                     <?php if($data['persetujuan']=='ya'){?>
                                                         <button class="btn btn-primary">Aktif</button>
                                                     <?php }else if($data['persetujuan']=='tidak'){ ?>
