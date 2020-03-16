@@ -48,6 +48,7 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
+                                                <th>Approved</th>
                                                 <th>Foto</th>
                                                 <th>Nama</th>
                                                 <th>Email</th>
@@ -74,6 +75,14 @@
                                         <tbody>
                                             <tr>
                                                 <td><?php echo $no;?></td>
+                                                <td>
+                                                    <?php if($data['persetujuan']=='ya'){?>
+                                                        <button class="btn btn-primary">Aktif</button>
+                                                    <?php }else if($data['persetujuan']=='tidak'){ ?>
+                                                        <button class="btn btn-danger">Tidak Aktif</button>
+                                                    <?php }?>
+
+                                                </td>
                                                 <td><?php echo"<img width='50px' src='../upload/".$data['foto']."'>";?></td>
                                                 <td><?php echo $data['nama']?></td>
                                                 <td><?php echo $data['email']?></td>
