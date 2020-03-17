@@ -29,14 +29,24 @@
             $fungsi_upload=move_uploaded_file($nama_sementara, $lokasi_upload.$md5file);
             
 
-            $query=mysqli_query($koneksi,"INSERT INTO biodata VALUES('$id','','$nama_saya','$email_saya','$jenis_kelamin','$alamat','$tanggal','$tempat_lahir','$no_hp','$hobby','$md5file')")or die(mysqli_error($query));
+            $query=mysqli_query($koneksi,"INSERT INTO biodata VALUES('$id','','$nama_saya','$email_saya','$jenis_kelamin','$alamat','$tanggal','$tempat_lahir','$no_hp','$hobby','$md5file','')")or die(mysqli_error($query));
 
             if($query){
 
-                echo'data biodata berhasil di masukkan';
+                echo'
+                    <script>
+                    alert("biodata berhasil di input!");
+                    window.location.href="../admin/biodata.php";
+                    </script>
+                ';
 
             }else{
-                echo'data gagal dimasukkan';
+                echo'
+                    <script>
+                    alert("data gagal di input!");
+                    window.location.href="../admin/biodata.php";
+                    </script>
+                ';
             }
 
             
